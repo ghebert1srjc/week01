@@ -16,7 +16,12 @@ let myserver = myhttp.createServer(
             if (myrequest.url === '/hey') {
                 mytext = "well hello there!";
             } else {
-                mytext = "I dunno you!";
+                if (myrequest.url === '/fight') {
+                mytext = "Ok big guy lets fight";
+            } else {
+                
+                mytext = "Whats up";
+            }
             }
 
             // writeHead() creates an http response header, including the status code (200 OK),
